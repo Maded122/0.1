@@ -13,12 +13,15 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...') no-repeat center center fixed;
+    background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...truncated...') no-repeat center center fixed;
     background-size: cover;
   }
   h1 {
     color: #fff;
-    text-shadow: 1px 1px 5px #000;
+    text-shadow: 2px 2px 5px #000;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 20px;
+    border-radius: 12px;
   }
   button {
     background-color: #ff4d94;
@@ -31,6 +34,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
   .heart {
     position: absolute;
@@ -49,9 +53,9 @@
 <button id="playBtn">▶️ Воспроизвести</button>
 
 <script>
-// Встроенный тестовый звук (~5 секунд). 
-// ЗАМЕНИ эту строку на свой Base64-аудио.
-const audioBase64 = "data:audio/mp3;base64,//uQxAAABAA...";
+// Тестовый звук: 5 секунд тишины (mp3 в Base64).
+// Потом замени на свой код: data:audio/mp3;base64,ТВОЙ_КОД_ЗДЕСЬ
+const audioBase64 = "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAFAAABAwACAAAAFAAAABAAABEVuY29kaW5nAAAAAA==";
 
 const btn = document.getElementById("playBtn");
 btn.onclick = () => {
